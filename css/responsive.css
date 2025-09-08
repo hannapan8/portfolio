@@ -1,0 +1,467 @@
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* ===== TABLET STYLES (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+    /* Header adjustments */
+    header {
+        padding: 1.5rem 2.5rem;
+    }
+    
+    .nav-links {
+        gap: 2rem;
+    }
+    
+    /* Hero section */
+    .hero {
+        padding: 0 2.5rem;
+    }
+    
+    .hero h1 {
+        font-size: clamp(2.5rem, 7vw, 5rem);
+    }
+    
+    /* Sections */
+    section {
+        padding: 6rem 2.5rem;
+    }
+    
+    /* About section */
+    .about-grid {
+        gap: 6rem;
+    }
+    
+    /* Work section */
+    .project {
+        gap: 4rem;
+    }
+    
+    .project-visual {
+        height: 350px;
+        font-size: 2.5rem;
+    }
+    
+    /* Experience section */
+    .experience-item {
+        gap: 3rem;
+    }
+    
+    .experience-item {
+        grid-template-columns: 150px 1fr;
+    }
+}
+
+/* ===== MOBILE STYLES (768px and below) ===== */
+@media (max-width: 768px) {
+    /* Hide custom cursor on mobile */
+    .cursor {
+        display: none;
+    }
+    
+    * {
+        cursor: auto !important;
+    }
+    
+    /* Header mobile styles */
+    header {
+        padding: 1.5rem 2rem;
+    }
+    
+    .nav-links {
+        display: none; /* Hide navigation on mobile */
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    /* Hero mobile styles */
+    .hero {
+        padding: 0 2rem;
+        text-align: left;
+    }
+    
+    .hero h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        max-width: 100%;
+    }
+    
+    .hero-scroll {
+        left: 2rem;
+        bottom: 2rem;
+    }
+    
+    /* Sections mobile styles */
+    section {
+        padding: 6rem 2rem;
+    }
+    
+    .section-title {
+        margin-bottom: 3rem;
+        font-size: 0.7rem;
+    }
+    
+    /* About section mobile */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: left;
+    }
+    
+    .about-text {
+        font-size: 1.2rem;
+    }
+    
+    .about-text p {
+        margin-bottom: 1.5rem;
+    }
+    
+    .skills-list {
+        margin-bottom: 2rem;
+    }
+    
+    .skills-list li {
+        padding: 0.75rem 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Work section mobile */
+    .work-grid {
+        gap: 6rem;
+        margin-top: 3rem;
+    }
+    
+    .project {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 3rem 0;
+        text-align: left;
+    }
+    
+    .project-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .project-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-tech {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .project-visual {
+        height: 250px;
+        font-size: 2rem;
+        order: -1; /* Show visual above text on mobile */
+    }
+    
+    .project-links {
+        gap: 1.5rem;
+    }
+    
+    .project-link {
+        font-size: 0.85rem;
+    }
+    
+    /* Experience section mobile */
+    .experience-list {
+        margin-top: 3rem;
+    }
+    
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 2.5rem 0;
+    }
+    
+    .experience-date {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .experience-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .experience-company {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .experience-description {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    /* Contact section mobile */
+    .contact h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-description {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+    
+    .contact-link {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== SMALL MOBILE STYLES (480px and below) ===== */
+@media (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 1rem 1.5rem;
+    }
+    
+    /* Hero */
+    .hero {
+        padding: 0 1.5rem;
+    }
+    
+    .hero h1 {
+        font-size: clamp(1.8rem, 5vw, 2.8rem);
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    
+    .hero-scroll {
+        left: 1.5rem;
+        font-size: 0.7rem;
+    }
+    
+    /* Sections */
+    section {
+        padding: 4rem 1.5rem;
+    }
+    
+    /* About */
+    .about-text {
+        font-size: 1.1rem;
+    }
+    
+    /* Work */
+    .work-grid {
+        gap: 4rem;
+    }
+    
+    .project {
+        padding: 2rem 0;
+    }
+    
+    .project-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .project-visual {
+        height: 200px;
+        font-size: 1.8rem;
+    }
+    
+    /* Experience */
+    .experience-item {
+        padding: 2rem 0;
+    }
+    
+    /* Contact */
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-description {
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== LARGE DESKTOP STYLES (1400px and above) ===== */
+@media (min-width: 1400px) {
+    /* Container max-width for very large screens */
+    header nav,
+    .hero-content,
+    section > * {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero {
+        padding: 0 4rem;
+    }
+    
+    section {
+        padding: 10rem 4rem;
+    }
+    
+    .hero h1 {
+        font-size: 8rem;
+    }
+    
+    .about-text {
+        font-size: 1.6rem;
+    }
+    
+    .project-info h3 {
+        font-size: 2.2rem;
+    }
+    
+    .contact h2 {
+        font-size: 3.5rem;
+    }
+}
+
+/* ===== LANDSCAPE ORIENTATION (MOBILE) ===== */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 8rem 2rem 4rem;
+    }
+    
+    .hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+    
+    .hero-scroll {
+        display: none;
+    }
+    
+    section {
+        padding: 4rem 2rem;
+    }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects on touch devices */
+    .project-visual:hover,
+    .project:hover,
+    .experience-item:hover,
+    .skills-list li:hover {
+        transform: none;
+    }
+    
+    /* Larger touch targets */
+    .nav-links a,
+    .project-link,
+    .contact-link {
+        padding: 0.5rem;
+        margin: -0.5rem;
+    }
+    
+    .project-link::after,
+    .contact-link::after {
+        display: none;
+    }
+    
+    /* Remove cursor effects */
+    .cursor {
+        display: none !important;
+    }
+    
+    * {
+        cursor: auto !important;
+    }
+}
+
+/* ===== HIGH DPI DISPLAYS ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Sharper borders and text */
+    .nav-links a::after,
+    .project-link::after,
+    .contact-link::after {
+        height: 0.5px;
+    }
+    
+    .cursor {
+        border-width: 0.5px;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    /* Hide interactive elements */
+    .cursor,
+    .hero-scroll,
+    .nav-links,
+    .project-visual {
+        display: none;
+    }
+    
+    /* Optimize for print */
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        padding: 2rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .about-grid,
+    .project {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Ensure links are visible */
+    .project-link::after,
+    .contact-link::after {
+        display: none;
+    }
+    
+    .project-link,
+    .contact-link {
+        text-decoration: underline;
+    }
+}
+
+/* ===== ACCESSIBILITY IMPROVEMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+    /* Simplified layout for motion-sensitive users */
+    .project-visual {
+        transform: none !important;
+    }
+    
+    .fade-in {
+        opacity: 1;
+        transform: none;
+    }
+    
+    .hero-scroll {
+        position: static;
+        writing-mode: horizontal-tb;
+        text-orientation: initial;
+        margin-top: 2rem;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+}

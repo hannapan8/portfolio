@@ -1,0 +1,367 @@
+/* ===== KEYFRAME ANIMATIONS ===== */
+
+/* Fade in from bottom animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll indicator animation */
+@keyframes scroll {
+    0% { 
+        transform: translateY(-20px); 
+    }
+    100% { 
+        transform: translateY(80px); 
+    }
+}
+
+/* Letter-by-letter fade animation */
+@keyframes letterFade {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Floating/pulse animation for project visuals */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Gradient shift animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Scale in animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===== ANIMATION CLASSES ===== */
+
+/* Hero subtitle animation */
+.hero-subtitle {
+    animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+/* Scroll indicator animation */
+.scroll-indicator::after {
+    animation: scroll 2s ease-in-out infinite;
+}
+
+/* Letter animation for hero title */
+.letter {
+    display: inline-block;
+    opacity: 0;
+    animation: letterFade 0.1s ease forwards;
+}
+
+/* Fade in animation for sections */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animations for multiple elements */
+.fade-in:nth-child(1) { transition-delay: 0.1s; }
+.fade-in:nth-child(2) { transition-delay: 0.2s; }
+.fade-in:nth-child(3) { transition-delay: 0.3s; }
+.fade-in:nth-child(4) { transition-delay: 0.4s; }
+
+/* Skills list animations */
+.skills-list li {
+    transition: all 0.3s ease;
+    transform: translateX(0);
+}
+
+.skills-list li:hover {
+    transform: translateX(10px);
+    color: var(--text-primary);
+}
+
+/* Project hover animations */
+.project {
+    transition: all 0.5s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project-visual {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-visual:hover {
+    transform: translateY(-10px) rotate(2deg);
+}
+
+.project-visual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.5s ease;
+}
+
+.project-visual:hover::before {
+    left: 100%;
+}
+
+/* Experience item animations */
+.experience-item {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(17, 17, 17, 0.02);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.experience-item:hover::before {
+    width: 100%;
+}
+
+.experience-item:hover {
+    padding-left: 2rem;
+}
+
+/* Link hover animations */
+.project-link {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(17,17,17,0.1), transparent);
+    transition: all 0.5s ease;
+}
+
+.project-link:hover::before {
+    left: 100%;
+}
+
+.contact-link {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.contact-link:hover {
+    transform: translateY(-2px);
+}
+
+/* Navigation animations */
+.nav-links li {
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover {
+    transform: translateY(-2px);
+}
+
+/* Header scroll animation */
+header {
+    transition: all 0.3s ease;
+}
+
+/* Logo animation */
+.logo {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Cursor animations */
+.cursor {
+    transition: all 0.1s ease;
+}
+
+.cursor.hover {
+    transition: all 0.3s ease;
+}
+
+/* ===== PAGE LOAD ANIMATIONS ===== */
+
+/* Body loaded state */
+body.loaded .hero h1 {
+    animation: fadeInUp 1s ease forwards;
+}
+
+body.loaded .hero-subtitle {
+    animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+body.loaded .hero-scroll {
+    animation: slideInLeft 1s ease 0.6s forwards;
+    opacity: 0;
+}
+
+body.loaded .hero-scroll {
+    opacity: 1;
+}
+
+/* Section title animations */
+.section-title {
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== SPECIAL EFFECTS ===== */
+
+/* Parallax effect for hero scroll */
+.hero-scroll {
+    transition: transform 0.1s ease-out;
+}
+
+/* Smooth cursor movement */
+.cursor {
+    will-change: transform;
+}
+
+/* Performance optimizations */
+.project-visual,
+.cursor,
+.hero-scroll {
+    will-change: transform;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .cursor {
+        display: none;
+    }
+    
+    .scroll-indicator::after {
+        animation: none;
+    }
+    
+    .fade-in {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ===== HOVER STATES FOR INTERACTIVE ELEMENTS ===== */
+
+/* Button-like hover effects */
+.project-link:hover,
+.contact-link:hover {
+    opacity: 0.7;
+}
+
+/* Section hover effects */
+.about-text:hover {
+    animation: none;
+}
+
+/* Subtle glow effect for important elements */
+.nav-links a.active {
+    text-shadow: 0 0 10px rgba(17, 17, 17, 0.3);
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+
+/* Page fade in */
+body {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Progressive loading for sections */
+section:nth-child(1) { animation-delay: 0.1s; }
+section:nth-child(2) { animation-delay: 0.2s; }
+section:nth-child(3) { animation-delay: 0.3s; }
+section:nth-child(4) { animation-delay: 0.4s; }
+section:nth-child(5) { animation-delay: 0.5s; }

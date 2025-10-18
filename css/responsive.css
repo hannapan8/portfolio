@@ -30,6 +30,12 @@
         gap: 6rem;
     }
     
+    .about-photo {
+        margin: 0 0 0.75rem 0; /* add top spacing for stacked layout */
+        width: 140px;
+        height: 140px;
+    }
+    
     /* Work section */
     .project {
         gap: 4rem;
